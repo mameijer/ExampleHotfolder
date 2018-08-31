@@ -1,3 +1,8 @@
 /.settings/
 /antBuild/
 /build/
+/.classpath
+/.prjDependencies.properties
+/.project
+/.project.properties
+/.sourceFolder.properties
