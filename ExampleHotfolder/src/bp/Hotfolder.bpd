@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProcessDiagram lastUid="103" scriptVersion="4.11" caption="Hotfolder" className="com.seeburger.wfd.bpmn2.impl.BPMNDocument" name="Hotfolder" uid="0" visible="true" xmlns="wfd">
+    <Model className="com.seeburger.wfd.bpmn2.model.DocumentModel">
+        <PropertySets name="name">
+            <val>Hotfolder</val>
+        </PropertySets>
+        <PropertySets name="documentType">
+            <val>Process</val>
+        </PropertySets>
+        <PropertySets name="Namespaces">
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://schemas.xmlsoap.org/wsdl/"/>
+                <valSet value="ns"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://uri.seeburger.com/bisas/message/schema"/>
+                <valSet value="msg"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://uri.seeburger.com/bisas/hotfolderservice/schema"/>
+                <valSet value="hotfolder"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://uri.seeburger.com/bisas/hotfolderservice/definition"/>
+                <valSet value="ns1"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://www.w3.org/2001/XMLSchema"/>
+                <valSet value="xsd"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                <valSet value="wsdlsoap"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"/>
+                <valSet value="plnk"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://schemas.xmlsoap.org/wsdl/java/"/>
+                <valSet value="java"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://www.seeburger.de/wsdl/si/"/>
+                <valSet value="si"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://schemas.xmlsoap.org/wsdl/formatbinding/"/>
+                <valSet value="format"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://uri.seeburger.com/bisas/storeservice/definition"/>
+                <valSet value="ns2"/>
+            </valObj>
+            <valObj className="com.seeburger.wfd.bpmn2.property.values.NamespaceObj">
+                <valSet value="http://uri.seeburger.com/bisas/storeservice/schema"/>
+                <valSet value="sa"/>
+            </valObj>
+        </PropertySets>
+        <PropertySets name="revision">
+            <val>$Revision$</val>
+        </PropertySets>
+    </Model>
+    <RecDefault/>
+    <container caption="" className="com.seeburger.wfd.bpmn2.impl.BPMNLayer" moveable="true" uid="1" visible="true">
+        <Model className="com.seeburger.wfd.bpmn2.model.ElementModel"/>
+        <RecDefault height="500" width="100"/>
+    </container>
+    <container laneOrderNumber="-1" caption="main" className="com.seeburger.wfd.bpmn2.impl.BPMNProcess" name="Hotfolder" moveable="true" uid="2" visible="true">
+        <Model className="com.seeburger.wfd.bpmn2.model.ProcessModel">
+            <PropertySets name="name">
+                <val>Hotfolder</val>
+            </PropertySets>
+        </Model>
+        <RecDefault height="500" width="200"/>
+        <container caption="" className="com.seeburger.wfd.bpmn2.impl.BPMNLayer" moveable="true" uid="3" visible="true">
+            <Model className="com.seeburger.wfd.bpmn2.model.ElementModel"/>
+            <RecDefault height="500" width="100"/>
+        </container>
+        <lane laneOrderNumber="0" caption="Lane1" className="com.seeburger.wfd.bpmn2.impl.BPMNLane" name="Lane1" uid="4" visible="true">
+            <Model className="com.seeburger.wfd.bpmn2.model.LaneModel">
+                <PropertySets name="text">
+                    <val>Process</val>
+                </PropertySets>
+                <PropertySets name="documentationpath"/>
+                <PropertySets name="name">
+                    <val>Lane1</val>
+                </PropertySets>
+            </Model>
+            <RecDefault height="479" width="160"/>
+            <element caption="Start" className="com.seeburger.wfd.bpmn2.impl.BPMNStart" moveable="true" uid="6" visible="true">
+                <Dockings dockTyp="3" uid="7"/>
+                <Dockings dockTyp="4" uid="8"/>
+                <Dockings dockTyp="1" uid="9"/>
+                <Dockings dockTyp="2" uid="10"/>
+                <Model className="com.seeburger.wfd.bpmn2.model.StartModel"/>
+            </element>
+            <element caption="End" className="com.seeburger.wfd.bpmn2.impl.BPMNEnd" moveable="true" uid="11" visible="true">
+                <Dockings dockTyp="3" uid="12"/>
+                <Dockings dockTyp="4" uid="13"/>
+                <Dockings dockTyp="1" uid="14"/>
+                <Dockings dockTyp="2" uid="15"/>
+                <Model className="com.seeburger.wfd.bpmn2.model.EndModel"/>
+            </element>
+            <element caption="newFile" className="com.seeburger.wfd.bpmn2.impl.BPMNTask" moveable="true" uid="17" visible="true">
+                <Dockings dockTyp="3" uid="18"/>
+                <Dockings dockTyp="4" uid="19"/>
+                <Dockings dockTyp="1" uid="20"/>
+                <Dockings dockTyp="6" uid="21"/>
+                <Dockings dockTyp="7" uid="22"/>
+                <Dockings dockTyp="8" uid="23"/>
+                <Dockings dockTyp="9" uid="24"/>
+                <Dockings dockTyp="2" uid="25"/>
+                <Dockings dockTyp="12" uid="26"/>
+                <Dockings dockTyp="13" uid="27"/>
+                <Dockings dockTyp="10" uid="28"/>
+                <Dockings dockTyp="11" uid="29"/>
+                <Model>
+                    <PropertySets name="documentation">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="text">
+                        <val>newFile</val>
+                    </PropertySets>
+                    <PropertySets name="name">
+                        <val>newFile</val>
+                    </PropertySets>
+                    <PropertySets name="type">
+                        <val>Receive</val>
+                    </PropertySets>
+                    <PropertySets name="instantiate">
+                        <val>true</val>
+                    </PropertySets>
+                    <PropertySets name="outputVariable">
+                        <val>FileEvent</val>
+                    </PropertySets>
+                    <PropertySets name="tdlCategory">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="tdlPartner">
+                        <val>Hotfolder</val>
+                    </PropertySets>
+                    <PropertySets name="tdlPorttype">
+                        <val>{http://uri.seeburger.com/bisas/hotfolderservice/definition}FileEvent</val>
+                    </PropertySets>
+                    <PropertySets name="tdlOpertation">
+                        <val>newFile</val>
+                    </PropertySets>
+                    <PropertySets name="tdlLink">
+                        <val>/BIS652SP52/HotFolderService.wsdl</val>
+                    </PropertySets>
+                    <PropertySets name="tdlPrjLink">
+                        <val>file:BIS652SP52</val>
+                    </PropertySets>
+                    <PropertySets name="inputMessage">
+                        <val>{http://uri.seeburger.com/bisas/hotfolderservice/definition}HotFolderEvent</val>
+                    </PropertySets>
+                </Model>
+            </element>
+            <assign caption="Assign44" className="com.seeburger.wfd.bpmn2.impl.BPMNAssign" moveable="true" uid="44" visible="true">
+                <Dockings dockTyp="3" uid="45"/>
+                <Dockings dockTyp="1" uid="46"/>
+                <Dockings dockTyp="4" uid="47"/>
+                <Dockings dockTyp="2" uid="48"/>
+                <Model className="com.seeburger.wfd.bpmn2.model.AssignModel"/>
+            </assign>
+            <element caption="storeAttachments" className="com.seeburger.wfd.bpmn2.impl.BPMNTask" moveable="true" uid="52" visible="true">
+                <Dockings dockTyp="3" uid="53"/>
+                <Dockings dockTyp="4" uid="54"/>
+                <Dockings dockTyp="1" uid="55"/>
+                <Dockings dockTyp="6" uid="56"/>
+                <Dockings dockTyp="7" uid="57"/>
+                <Dockings dockTyp="8" uid="58"/>
+                <Dockings dockTyp="9" uid="59"/>
+                <Dockings dockTyp="2" uid="60"/>
+                <Dockings dockTyp="12" uid="61"/>
+                <Dockings dockTyp="13" uid="62"/>
+                <Dockings dockTyp="10" uid="63"/>
+                <Dockings dockTyp="11" uid="64"/>
+                <Model>
+                    <PropertySets name="documentation">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="text">
+                        <val>storeAttachments</val>
+                    </PropertySets>
+                    <PropertySets name="name">
+                        <val>storeAttachments</val>
+                    </PropertySets>
+                    <PropertySets name="inputVariable">
+                        <val>StoreIn</val>
+                    </PropertySets>
+                    <PropertySets name="outputVariable">
+                        <val>StoreOut</val>
+                    </PropertySets>
+                    <PropertySets name="tdlCategory">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="tdlPartner">
+                        <val>StoreService</val>
+                    </PropertySets>
+                    <PropertySets name="tdlPorttype">
+                        <val>{http://uri.seeburger.com/bisas/storeservice/definition}storePT</val>
+                    </PropertySets>
+                    <PropertySets name="tdlOpertation">
+                        <val>storeAttachments</val>
+                    </PropertySets>
+                    <PropertySets name="tdlLink">
+                        <val>/BIS652SP52/StoreService.wsdl</val>
+                    </PropertySets>
+                    <PropertySets name="tdlPrjLink">
+                        <val>file:BIS652SP52</val>
+                    </PropertySets>
+                    <PropertySets name="inputMessage">
+                        <val>{http://uri.seeburger.com/bisas/storeservice/definition}StoreAttachmentRequest</val>
+                    </PropertySets>
+                    <PropertySets name="outputMessage">
+                        <val>{http://uri.seeburger.com/bisas/storeservice/definition}StoreResponse</val>
+                    </PropertySets>
+                    <PropertySets name="faultMessage">
+                        <val>{http://uri.seeburger.com/bisas/storeservice/definition}StoreFault</val>
+                    </PropertySets>
+                </Model>
+                <Attachments caption="Assign76" className="com.seeburger.wfd.bpmn2.impl.BPMNAssign" uid="76">
+                    <Dockings dockTyp="3" uid="77"/>
+                    <Dockings dockTyp="1" uid="78"/>
+                    <Dockings dockTyp="4" uid="79"/>
+                    <Dockings dockTyp="2" uid="80"/>
+                    <Model className="com.seeburger.wfd.bpmn2.model.AssignModel">
+                        <PropertySets name="name">
+                            <val>storeAttachmentsInputAssign</val>
+                        </PropertySets>
+                    </Model>
+                    <Assigns>
+                        <fromPart query="/hotfolder:eventData/hotfolder:inref" variableName="FileEvent" variablePartName="eventData"/>
+                        <toPart query="/sa:StoreAttachmentRequest/sa:StoreItem[1]/sa:attachmentRef" variableName="StoreIn" variablePartName="request"/>
+                    </Assigns>
+                    <Assigns fromMessage="false">
+                        <fromPart expression="'c:\Example\Test.dta'"/>
+                        <toPart query="/sa:StoreAttachmentRequest/sa:StoreItem[1]/sa:targetLocation" variableName="StoreIn" variablePartName="request"/>
+                    </Assigns>
+                </Attachments>
+            </element>
+            <flow className="com.seeburger.wfd.bpmn2.impl.BPMNSequenceFlow" moveable="true" uid="16" visible="true">
+                <DockSource dockTyp="3" uid="7"/>
+                <DockSink dockTyp="1" uid="20"/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <Model className="com.seeburger.wfd.bpmn2.model.SequenceFlowModel">
+                    <PropertySets name="conditionExpression"/>
+                </Model>
+            </flow>
+            <flow className="com.seeburger.wfd.bpmn2.impl.BPMNSequenceFlow" moveable="true" uid="30" visible="true">
+                <DockSource dockTyp="3" uid="18"/>
+                <DockSink dockTyp="1" uid="46"/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <Model className="com.seeburger.wfd.bpmn2.model.SequenceFlowModel">
+                    <PropertySets name="name">
+                        <val>Seq</val>
+                    </PropertySets>
+                    <PropertySets name="conditionExpression"/>
+                </Model>
+            </flow>
+            <flow className="com.seeburger.wfd.bpmn2.impl.BPMNSequenceFlow" moveable="true" uid="49" visible="true">
+                <DockSource dockTyp="3" uid="45"/>
+                <DockSink dockTyp="1" uid="55"/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <Model className="com.seeburger.wfd.bpmn2.model.SequenceFlowModel">
+                    <PropertySets name="name">
+                        <val>Seq2</val>
+                    </PropertySets>
+                    <PropertySets name="conditionExpression"/>
+                </Model>
+            </flow>
+            <flow className="com.seeburger.wfd.bpmn2.impl.BPMNSequenceFlow" moveable="true" uid="65" visible="true">
+                <DockSource dockTyp="3" uid="53"/>
+                <DockSink dockTyp="1" uid="14"/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <LinePoints/>
+                <Model className="com.seeburger.wfd.bpmn2.model.SequenceFlowModel">
+                    <PropertySets name="name">
+                        <val>Seq1</val>
+                    </PropertySets>
+                    <PropertySets name="conditionExpression"/>
+                </Model>
+            </flow>
+        </lane>
+        <lane expanded="false" laneOrderNumber="1" caption="Lane2" className="com.seeburger.wfd.bpmn2.impl.BPMNDataLane" name="Lane" uid="5" visible="true">
+            <Model className="com.seeburger.wfd.bpmn2.model.LaneModel">
+                <PropertySets name="text">
+                    <val>Data</val>
+                </PropertySets>
+                <PropertySets name="documentationpath"/>
+                <PropertySets name="laneType">
+                    <val>Data</val>
+                </PropertySets>
+            </Model>
+            <RecDefault height="479" width="40"/>
+            <element caption="vrHotFolderEvent" className="com.seeburger.wfd.bpmn2.impl.BPMNDataObject" moveable="true" uid="31" visible="false">
+                <Dockings dockTyp="6" uid="32"/>
+                <Dockings dockTyp="7" uid="33"/>
+                <Model className="com.seeburger.wfd.bpmn2.model.DataObjectModel">
+                    <PropertySets name="name">
+                        <val>FileEvent</val>
+                    </PropertySets>
+                    <PropertySets name="variableType">
+                        <val>{http://uri.seeburger.com/bisas/hotfolderservice/definition}HotFolderEvent</val>
+                    </PropertySets>
+                    <PropertySets name="variableLink">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="variableTypeQNameMeaning">
+                        <val>wsdl message</val>
+                    </PropertySets>
+                </Model>
+                <Attachments caption="FileEvent" className="com.seeburger.wfd.bpmn2.impl.BPMNLabel" moveable="true" uid="34" visible="true">
+                    <Model className="com.seeburger.wfd.bpmn2.model.ElementModel"/>
+                </Attachments>
+            </element>
+            <element caption="vrStoreAttachmentRequest" className="com.seeburger.wfd.bpmn2.impl.BPMNDataObject" moveable="true" uid="66" visible="false">
+                <Dockings dockTyp="6" uid="67"/>
+                <Dockings dockTyp="7" uid="68"/>
+                <Model className="com.seeburger.wfd.bpmn2.model.DataObjectModel">
+                    <PropertySets name="name">
+                        <val>StoreIn</val>
+                    </PropertySets>
+                    <PropertySets name="variableType">
+                        <val>{http://uri.seeburger.com/bisas/storeservice/definition}StoreAttachmentRequest</val>
+                    </PropertySets>
+                    <PropertySets name="variableLink">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="variableTypeQNameMeaning">
+                        <val>wsdl message</val>
+                    </PropertySets>
+                </Model>
+                <Attachments caption="StoreIn" className="com.seeburger.wfd.bpmn2.impl.BPMNLabel" moveable="true" uid="69" visible="true">
+                    <Model className="com.seeburger.wfd.bpmn2.model.ElementModel"/>
+                </Attachments>
+            </element>
+            <element caption="vrStoreResponse" className="com.seeburger.wfd.bpmn2.impl.BPMNDataObject" moveable="true" uid="70" visible="false">
+                <Dockings dockTyp="6" uid="71"/>
+                <Dockings dockTyp="7" uid="72"/>
+                <Model className="com.seeburger.wfd.bpmn2.model.DataObjectModel">
+                    <PropertySets name="name">
+                        <val>StoreOut</val>
+                    </PropertySets>
+                    <PropertySets name="variableType">
+                        <val>{http://uri.seeburger.com/bisas/storeservice/definition}StoreResponse</val>
+                    </PropertySets>
+                    <PropertySets name="variableLink">
+                        <val/>
+                    </PropertySets>
+                    <PropertySets name="variableTypeQNameMeaning">
+                        <val>wsdl message</val>
+                    </PropertySets>
+                </Model>
+                <Attachments caption="StoreOut" className="com.seeburger.wfd.bpmn2.impl.BPMNLabel" moveable="true" uid="73" visible="true">
+                    <Model className="com.seeburger.wfd.bpmn2.model.ElementModel"/>
+                </Attachments>
+            </element>
+        </lane>
+    </container>
+    <Imports>
+        <Import>
+            <type>wsdl</type>
+            <id>-125445809</id>
+            <path>HotFolderService.wsdl</path>
+            <locationVariable>$CurrentServerProject</locationVariable>
+        </Import>
+        <Import>
+            <type>wsdl</type>
+            <id>2101691284</id>
+            <path>StoreService.wsdl</path>
+            <locationVariable>$CurrentServerProject</locationVariable>
+        </Import>
+    </Imports>
+</ProcessDiagram>
