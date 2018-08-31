@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         name="Hotfolder"
+         targetNamespace="http://www.seeburger.com/"
+
+         xmlns:ns="http://schemas.xmlsoap.org/wsdl/"
+         xmlns:msg="http://uri.seeburger.com/bisas/message/schema"
+         xmlns:hotfolder="http://uri.seeburger.com/bisas/hotfolderservice/schema"
+         xmlns:ns1="http://uri.seeburger.com/bisas/hotfolderservice/definition"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+         xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+         xmlns:java="http://schemas.xmlsoap.org/wsdl/java/"
+         xmlns:si="http://www.seeburger.de/wsdl/si/"
+         xmlns:format="http://schemas.xmlsoap.org/wsdl/formatbinding/"
+         xmlns:ns2="http://uri.seeburger.com/bisas/storeservice/definition"
+         xmlns:sa="http://uri.seeburger.com/bisas/storeservice/schema"
+         xmlns:tns="http://www.seeburger.com/"
+         xmlns:bpwsinfo="http://uri.seeburger.com/bisas/engine/processinfovar/"
+         xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:see="http://www.seeburger.de/"
+         xmlns:seeutil="http://www.seeburger.de/seeutil/"
+         xmlns:dtutil="http://www.seeburger.de/dtutil/"
+         enableInstanceCompensation="yes"
+         abstractProcess="no">
+   <partnerLinks>
+      <partnerLink name="Hotfolder" partnerLinkType="ns1:HotFolderInitLink" myRole="Initiator" partnerRole="Initiator"/>
+      <partnerLink name="StoreService" partnerLinkType="ns2:StoreService" myRole="Caller" partnerRole="Receiver"/>
+   </partnerLinks>
+   <variables>
+      <variable name="FileEvent" messageType="ns1:HotFolderEvent"/>
+      <variable name="StoreIn" messageType="ns2:StoreAttachmentRequest"/>
+      <variable name="StoreOut" messageType="ns2:StoreResponse"/>
+   </variables>
+
+   <sequence name="Start">
+      <receive name="newFile"
+             partnerLink="Hotfolder" portType="ns1:FileEvent" operation="newFile"
+             variable="FileEvent" createInstance="yes">
+      </receive>
+      <assign name="storeAttachmentsInputAssign">
+         <copy>
+            <from variable="FileEvent" part="eventData" query="/hotfolder:eventData/hotfolder:inref"/>
+            <to variable="StoreIn" part="request" query="/sa:StoreAttachmentRequest/sa:StoreItem[1]/sa:attachmentRef"/>
+         </copy>
+         <copy>
+            <from expression="'c:\Example\Test.dta'"/>
+            <to variable="StoreIn" part="request" query="/sa:StoreAttachmentRequest/sa:StoreItem[1]/sa:targetLocation"/>
+         </copy>
+      </assign>
+      <invoke name="storeAttachments"
+              partnerLink="StoreService" portType="ns2:storePT" operation="storeAttachments"
+              inputVariable="StoreIn" outputVariable="StoreOut">
+      </invoke>
+   </sequence>
+</process>
